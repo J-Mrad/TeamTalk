@@ -1,0 +1,258 @@
+﻿/*side nav*/
+.row.content {
+    height: 550px; 
+}
+.sidenav {
+    background-color: #f1f1f1;
+    height: 100%;
+}
+@media screen and (max-width: 767px) {
+    .row.content {
+        height: auto;
+    }
+}
+#newChatHolder {
+    background: black;
+    color:white;
+}
+
+/*top nav*/
+
+.topnavbar {
+    position: fixed;
+    background: white;
+    width: 100%;
+    margin-top: -20px;
+    margin-left: -35px;
+}
+.topnav {
+    transition: all 1s;
+    color: #000000;
+}
+.topnav:hover {
+    color: #9ec7ff;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .notOnMobile {
+        display: none;
+    }
+    .fitMobile{
+        width:100%;
+    }
+}
+
+/*margins & padding*/
+.automargins{
+    margin: auto;
+}
+.autoverticalmargins {
+    margin: auto 0 auto 0;
+}
+.padded-low {
+    padding: 15px;
+}
+.vertical {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.horizantal {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+
+/*images*/
+.image {
+    max-width: 80%;
+}
+
+.icon{
+    width: 30px;
+}
+
+.profileImage{
+    width: 100px;
+}
+
+.profileImageTo{
+    width: 50px;
+}
+
+.imgupload {
+    max-height: 250px;
+}
+
+/*colors*/
+.bgBlack {
+    background: #000000;
+}
+.bgWhite{
+    background: #FFFFFF;
+}
+.bgTeal{
+    background: #9EC7FF;
+}
+
+/*chat*/
+
+.roundBorder {
+    border: 2px solid #0F0F0F;
+    border-radius: 25px;
+}
+
+.chatfield {
+    border: 2px solid #0F0F0F;
+    border-radius: 25px;
+    padding: 13px;
+}
+
+.user1 {
+    background-color: #0F0F0F;
+    color: #FFFFFF;
+    border-radius: 25px;
+    padding: 20px;
+    width: 80%;
+    min-height: 100px;
+    margin-bottom:10px;
+}
+
+    .user1:hover {
+        background-color: #565656;
+        transition: all 1s;
+    }
+
+.user2 {
+    background-color: #F0F0F0;
+    border: 2px solid #0F0F0F;
+    color: #000000;
+    border-radius: 25px;
+    padding: 20px;
+    width: 80%;
+    min-height: 100px;
+
+    margin-left: 19.4vw;
+
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+    .user2:hover {
+        background-color: #969696;
+        transition: all 1s;
+        color: #ffffff;
+    }
+
+.userAdmin {
+    background-color: #FFFFFF;
+    color: #FFFFFF;
+    border-radius: 25px;
+    padding: 20px;
+    width: 80%;
+    min-height: 100px;
+    margin-bottom: 10px;
+    margin-left:20px;
+}
+
+.urgent{
+    background-color:lightcoral !important;
+}
+
+.messageType{
+    padding-top:20px;
+}
+
+#Text1{
+    width:100%;
+    height:100%;
+    padding-left:20px;
+}
+
+/*button*/
+
+.button {
+    background: #FFFFFF;
+}
+    .button:hover {
+        background: #565656;
+        transition: all 1s;
+    }
+
+#ButtonUpload {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
+    border: 3px solid #000;
+}
+
+.startcht{
+    width:120px;
+    height:120px;
+    visibility:visible;
+}
+
+
+.sidenavbardiv {
+    width: 100%;
+    background: #262626;
+    color: white;
+    font-size: smaller;
+}
+.sidenavbardivurgent {
+    width: 100%;
+    background: #565656;
+    color: red;
+    font-size: smaller;
+}
+    .sidenavbardiv:hover, .sidenavbardivurgent:hover {
+        transition: 1s all ease-in-out;
+        background: white;
+        font-size: large;
+    }
+    .sidenavbardiv:hover{
+        color:black;
+    }
+
+.logoutbutton{
+    height:30px;
+}
+
+/*fileUpload*/
+
+.file-upload {
+    cursor: pointer;
+}
+
+    .file-upload input {
+        top: 0;
+        left: 0;
+        margin: 0;
+        /* Loses tab index in webkit if width is set to 0 */
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+
+/*floaters*/
+.floater {
+    position: fixed;
+}
+.floaterImg {
+    width: 100px;
+    margin-left: 7%;
+    margin-top: 7%;
+}
+.floaterOnline {
+    width: 10px;
+    margin-left:5%;
+    margin-top:5%;
+    background: green;
+}
+.floaterOffline {
+    width: 10px;
+    margin-left: 5%;
+    margin-top: 5%;
+    background: red;
+}

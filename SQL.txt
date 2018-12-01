@@ -1,0 +1,62 @@
+DROP TABLE M_essage
+DROP TABLE myUser
+DROP TABLE Company
+DROP TABLE FileHolder
+
+CREATE TABLE FileHolder(
+	FID			int IDENTITY(1,1) PRIMARY KEY,
+	FName			varchar(100)
+
+)
+
+
+CREATE TABLE myUser(
+	UserID			int IDENTITY(1,1) PRIMARY KEY,
+	N_ame			varchar(30) NOT NULL,
+	Gender			char(1),
+	Email			varchar(30) NOT NULL,
+	P_assword		varchar(30) NOT NULL,
+	StartedWorking		DateTime, 
+	Title			varchar(30) NOT NULL,
+	PhotoRef		int,
+	isOnline		int NOT NULL,
+	lastOnline		DateTime,
+	Company			int,
+	Role			varchar(10) NOT NULL,
+
+	FOREIGN KEY (PhotoRef) REFERENCES FileHolder (FID)
+)
+
+CREATE TABLE Company(
+	CID			int IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	N_ame			varchar(30) NOT NULL,
+	D_esc			varchar(30) NOT NULL,
+	Email			varchar(30) NOT NULL,
+	LogoRef			int,
+	Active			int NOT NULL,
+	RelatedUser		int,
+	ListEmployees		varchar(max),
+	
+	FOREIGN KEY (RelatedUser) REFERENCES myUser (UserID),
+	FOREIGN KEY (LogoRef) REFERENCES FileHolder (FID)
+)
+
+CREATE TABLE M_essage(
+	MID			int IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	SenderID		int NOT NULL,
+	ReceiverID		int NOT NULL,
+	timeSent		DateTime NOT NULL,
+	isRead			int NOT NULL,
+	timeRead		DateTime,
+	isUrgent		int NOT NULL,
+	isDeleted		int NOT NULL,
+	isText			int NOT NULL,
+	T_ext			varchar(max),
+	isFile			int NOT NULL,
+	FileRef			int,
+	
+	FOREIGN KEY (SenderID) REFERENCES myUser (UserID),
+	FOREIGN KEY (ReceiverID) REFERENCES myUser (UserID),
+	FOREIGN KEY (FileRef) REFERENCES FileHolder (FID)
+
+)
