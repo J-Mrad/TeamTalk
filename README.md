@@ -19,7 +19,8 @@ TeamTalk aims to provide a reliable alternative to time-consuming email conversa
 TT is designed to be an ASP.NET C# template for an office chat application. To set up the project on your PC:<br />
 <br />
 1- Create a non-MVC ASP.NET solution<br />
-2- Create the following web forms and pase in the given .aspx and .aspx.cx syntax: <br />
+2- Add in provided CSS/JS and icons from Content
+3- Create the following web forms and pase in the given .aspx and .aspx.cx syntax from Pages: <br />
 &nbsp;&nbsp;&nbsp; login: Login page<br />
 &nbsp;&nbsp;&nbsp; index: contacts page<br />
 &nbsp;&nbsp;&nbsp; indexChat: chat page<br />
@@ -27,8 +28,8 @@ TT is designed to be an ASP.NET C# template for an office chat application. To s
 &nbsp;&nbsp;&nbsp; manageUser: edit user settings<br />
 &nbsp;&nbsp;&nbsp; CompanyManager: edit company<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; optional: CompanyManagerAdmin and AdminUsers for admins to create companies/users<br />
-3- Create a DB on your preferred DBMS with the provded syntax<br />
-4- Set up the EntityFramework<br />
+4- Create a DB on your preferred DBMS with the provded syntax<br />
+5- Set up the EntityFramework<br />
 &nbsp;&nbsp;&nbsp; [suggested tutorial](https://www.c-sharpcorner.com/article/entity-framework-introduction-using-c-sharp-part-one/)<br />
 <br />
 This should get you a working prototype. This version has had some functionalities ommitted including MVC and ASP Membership provider. Use it as a reference or a base template to build upon for your own projects. MVC is always preffered for applications of this scale.
